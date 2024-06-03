@@ -27,13 +27,24 @@ function createHearts() {
 
 function getRandomColor() {
   const colors = [
-    "#e91e63",
     "#f06292",
     "#f8bbd0",
     "#ad1457",
     "#d81b60",
     "#ff4081",
     "#ff80ab",
+    "#FFBF00",
+    "#7E8EF1",
+    "#97BE5A",
+    "#5AB2FF",
+    "#FC4100",
+    "#121481",
+    "#153448",
+    "#8DECB4",
+    "#0E46A3",
+    "#86469C",
+    "#C4E4FF",
+    "#50727B",
   ];
   return colors[Math.floor(Math.random() * colors.length)];
 }
