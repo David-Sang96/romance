@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(45deg, #f06292, #f8bbd0);
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+  max-width: 90%;
+  margin: 0 10px;
+}
+
+#girlfriendImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#girlfriendImage:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+p {
+  color: #ad1457;
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #d81b60;
+  transform: scale(1.1);
+}
+
+#heartContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: #e91e63;
+  position: absolute;
+  bottom: 0;
+  transform: rotate(-45deg);
+  animation: float 5s linear infinite;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #e91e63;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -25px;
+  left: 0;
+}
+
+.heart:after {
+  left: 25px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-text {
+  animation: textAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  #girlfriendImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
